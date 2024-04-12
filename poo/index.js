@@ -8,20 +8,21 @@ class Encuesta {
     console.log("El nombre de la encuesta es: " + this.nombre);
   }
 
-  agregarPreguntas(pregunta) {
-    this.preguntas.push(pregunta);
+  agregarPregunta(pregunta) {
+    this.preguntas.push({ pregunta, votos: 0 });
   }
 
   mostrarPreguntas() {
     this.mostrarNombreEncuesta();
-    this.preguntas.forEach((pregunta) => console.log(pregunta,indice));
+    this.preguntas.forEach((pregunta, indice) => console.log(pregunta, indice));
   }
 
-  votarPreguntas() {
-    if (indicePregunta >= 0 && indicePregunta < this.preguntas.length) {
+  votarPregunta(indicePregunta) {
+    if (indicePregunta >= 0 && this.preguntas.length) {
       this.preguntas[indicePregunta].votos++;
+      // console.log(`¡Voto registrado para la pregunta ${indicePregunta + 1}!`);
     } else {
-      console.log("El índice de pregunta no es válido.");
+      console.log("Índice de pregunta inválido.");
     }
   }
 }
@@ -29,12 +30,13 @@ class Encuesta {
 //Uso
 const encuesta = new Encuesta("Mi Primera Encuesta");
 
-encuesta.agregarPreguntas("Pregunta 1");
-encuesta.agregarPreguntas("Pregunta 2");
-encuesta.agregarPreguntas("Pregunta 3");
+encuesta.agregarPregunta("Pregunta 1");
+encuesta.agregarPregunta("Pregunta 2");
+encuesta.agregarPregunta("Pregunta 3");
 
-encuesta.votarPregunta(0);
-encuesta.votarPregunta(0);
+encuesta.votarPregunta(1);
+encuesta.votarPregunta(1);
+encuesta.votarPregunta(1);
 encuesta.votarPregunta(1);
 
 encuesta.mostrarPreguntas();
