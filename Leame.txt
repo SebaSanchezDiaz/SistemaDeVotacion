@@ -1,0 +1,6 @@
+Buenas Tardes Profesor.
+
+- Creo que cumpli los con los objetivos, no unico que me falto es que agarre la votacion correctamente usando programacion funcional.
+
+Mi nombre: Sebastian Sanchez Diaz
+Desarrollo Web FullStack C13

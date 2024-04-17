@@ -26,8 +26,6 @@ class Encuesta {
   }
 }
 
-
-
 //Uso
 //Para crear la encuesta.
 const encuesta = new Encuesta("Mi Primera Encuesta");
@@ -51,7 +49,7 @@ encuesta.votarPregunta(1);
 encuesta.votarPregunta(2);
 encuesta.votarPregunta(2);
 encuesta.votarPregunta(0);
-encuesta.votarPregunta(0);
+encuesta.votarPregunta(7);
 
 //Muestra mi encuesta
 encuesta.mostrarPreguntas();
